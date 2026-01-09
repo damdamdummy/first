@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sophia & Adam Day</title>
+    <meta property="og:image" content="https://piadam.site/assets/images/5.jpg" />
+    <title>Sophia & Adam</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&display=swap');
 
@@ -712,7 +713,7 @@
             background-image:
                 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" /></filter><rect width="300" height="300" filter="url(%23noise)" opacity="0.04"/></svg>');
             pointer-events: none;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         .modal-container::after {
@@ -781,10 +782,15 @@
             width: 100%;
             overflow: hidden;
             border-right: 3px solid #8b6f47;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             animation: blink-caret 0.75s step-end infinite;
-            min-height: 1.5em;
             line-height: 1.7;
         }
+
 
         @keyframes blink-caret {
 
@@ -801,17 +807,16 @@
         .like-button {
             background: linear-gradient(135deg, #c9a87c 0%, #a68a64 100%);
             color: white;
-            padding: 16px 45px;
+            padding: 10px 25px;
             border: 3px solid rgba(255, 255, 255, 0.4);
             border-radius: 30px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 10px;
             font-weight: 600;
             transition: all 0.2s ease;
-            box-shadow: 4px 4px 0px rgba(139, 111, 71, 0.3),
-                inset -2px -2px 5px rgba(0, 0, 0, 0.1),
-                inset 2px 2px 5px rgba(255, 255, 255, 0.2);
-            margin-top: 100px;
+            box-shadow: 4px 4px 0px rgba(139, 111, 71, 0.3);
+            margin-top: 30px;
+
             font-family: 'Patrick Hand', cursive;
             transform: rotate(-1deg);
         }
@@ -866,7 +871,7 @@
             box-shadow: 5px 5px 0px rgba(139, 111, 71, 0.3),
                 inset -2px -2px 5px rgba(0, 0, 0, 0.1);
             border: 3px solid rgba(255, 255, 255, 0.4);
-            transform: rotate(-1deg);
+            transform: rotate(0deg);
         }
 
         .video-container iframe {
@@ -1092,7 +1097,7 @@
             </div>
             <div class="notification-content">
                 <strong>Adam</strong>
-                <p>Tap to view.</p>
+                <p>Happy 1-month, Sophia. Tap to view more.</p>
             </div>
         </div>
     </div>
@@ -1231,7 +1236,7 @@
             const heart = document.createElement('div');
             const isBlack = Math.random() > 0.5;
             heart.classList.add('floating-heart');
-            heart.innerHTML = isBlack ? '🖤' : '🤍';
+            heart.innerHTML = isBlack ? '♥︎' : '♡';
             const size = Math.random() * 20 + 15 + 'px';
             heart.style.fontSize = size;
             heart.style.left = Math.random() * 100 + 'vw';
@@ -1349,9 +1354,10 @@
             currentMessageIndex = (currentMessageIndex + 1) % messages.length;
         }
         const typingTexts = [
-            "Happy Monthsary!",
-            "I'm so glad we met.",
-            "Thank you for everything.",
+            "January 12, 2025.\nToday marks our first month and also 100 days since we first talked.",
+            "Perjalanan ini tidak selalu mulus. Banyak naik turunnya, maybe more downs than we expected.",
+            "But somehow we both still choose to stay.",
+            "Thank you for sticking around. I know it's not easy.",
         ];
 
         let textIndex = 0, charIndex = 0;
