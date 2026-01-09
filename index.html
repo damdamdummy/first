@@ -532,20 +532,24 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -40%) scale(0.95);
             width: 90%;
             max-width: 360px;
-            background: rgba(245, 235, 224, 0.75);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 25px;
-            padding: 18px;
-            box-shadow: 5px 5px 0px rgba(139, 111, 71, 0.2);
+            background: rgba(245, 235, 224, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 14px 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
             z-index: 1000;
             opacity: 0;
+            visibility: hidden;
             cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 3px solid rgba(255, 255, 255, 0.4);
+            transition:
+                opacity 0.5s ease,
+                transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                visibility 0.5s;
+            border: 1px solid rgba(255, 255, 255, 0.5);
             animation: notifFloat 4s ease-in-out infinite;
         }
 
@@ -564,6 +568,7 @@
         .notification-popup.active {
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
+            visibility: visible;
         }
 
         .notification-body {
